@@ -1,0 +1,7 @@
+api_homepage:
+    path:     /
+    defaults: { _controller: APIBundle:Default:index }
+
+api_artistes:
+    path:     /artistes
+    defaults: {_controller:}
