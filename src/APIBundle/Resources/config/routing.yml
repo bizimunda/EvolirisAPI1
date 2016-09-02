@@ -4,4 +4,20 @@ api_homepage:
 
 api_artistes:
     path:     /artistes
-    defaults: {_controller:}
+    defaults: {_controller: APIBundle:Artiste:read}
+
+api_artistes_create:
+    path:     /artistes/create
+    defaults: {_controller: APIBundle:Artiste:create}
+
+api_artistes_delete:
+    path:     /artistes/delete
+    defaults: {_controller: APIBundle:Artiste:delete}
+
+api_artistes_update:
+   path:     /artistes/update
+   defaults: {_controller: APIBundle:Artiste:update}
+
+api_artistes_getbyName:
+   path:     /artistes/update
+   defaults: {_controller: APIBundle:Artiste:getByName}

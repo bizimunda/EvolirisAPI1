@@ -1,0 +1,33 @@
+Create a project
+create a bundle
+préfixe la route du bundle/(app/config/routing.yml)
+create des routes
+LOGIQUE APPLICATIVE
+create the controller
+
+POUR LES ROUTES
+    nom => NomBundle_controller_logique
+    path => URL (unique) !! Symphony s'arrete à la premier URL
+    defaults => _contoller
+                NomBundle:Controller:Methode
+
+
+Pour les controllers:
+         nom => NomController
+         extends=>Controller (symphocny/bundle/...)
+         méthodes => public function nomActoin()
+
+Request, JsonResponse, Response, forward(HttpFoundatoin)
+
+Pour les em:
+           $em= $this->getDoctrine()->getManager();
+           $repo=$em-getRepository("NomBundle:Entity");
+           Méthodes par défault:
+           find
+           findAll
+           findBy
+           findOneBy
+
+       Créer une nouvelle methode pour interagri avec la db:
+        dans le repo de la class => find(one, all) By(Critère)
+        queryBuilder
