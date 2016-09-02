@@ -48,9 +48,7 @@ class ArtisteController extends Controller  {
 
         $pseudoPart=$request->query->get("as");
         $em=$this->getDoctrine()->getManager();
-        $artistes=$em->getRepository("APIBundle:Artiste")->findByPseudoPart(array(
-            "pseudo"=>$pseudoPart
-        ));
+        $artistes=$em->getRepository("APIBundle:Artiste")->findByPseudoPart($pseudoPart);
         $json=array();
         foreach ($artistes as $artiste){
             array_push($json,$artiste->toJSON());

@@ -20,7 +20,7 @@ class ArtisteRepository extends \Doctrine\ORM\EntityRepository
          * */
 
         $qb = $this->createQueryBuilder("a")//a, artiste, artistes, b, ...
-        ->where('a.pseudo LIKE pseudoPart')
+        ->where('a.pseudo LIKE :pseudoPart')
             ->setParameter("pseudoPart", "%" . $pseudoPart . "%");
 
         return $qb->getQuery()->getResult();
